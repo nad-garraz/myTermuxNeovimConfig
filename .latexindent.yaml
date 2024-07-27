@@ -1,0 +1,58 @@
+defaultIndent: "  "
+lineWidth: 80
+
+specialBeginEnd:
+  llave:
+    begin: '\\llave\{.*?\}\{'
+    end: '\}'
+    lookForThis: 1
+    bodyCmdOrEnv:
+      name: tabular
+    additionalIndent: '  '
+
+modifyLineBreaks:
+  specialBeginEnd:
+    llave:
+      specialBeforeCommand: 1
+  mandatoryArguments:
+    caption:
+      DBSFinishesWithLineBreak: 1
+      MandArgBodyStartsOnOwnLine: 1
+      RCuBStartsOnOwnLine: 1
+
+indentAfterItems:
+  llave: 1
+
+alignAtAmpersand:
+  llave: 1
+
+lookForAlignDelims:
+  caption: 1
+  llave: 1
+
+textWrapOptions:
+  columns: 80
+  multipleSpacesToSingle: 1
+  blocksFollow:
+    other: \\\\|\\\]|\\item(?:\h|\[)|\\caption(?:\h|\[)
+  blocksBeginWith:
+    0-9: 1
+    other: \\\(
+
+overwrite: 1
+
+fileExtensionPreference:
+  .tex: 1
+  .sty: 2
+  .cls: 3
+  .bib: 4
+
+backupExtension: .bak
+onlyOneBackUp: 1
+
+# Add these new settings for llave
+noAdditionalIndent:
+  llave: 1
+
+indentRules:
+  llave: 1
