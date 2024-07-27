@@ -17,7 +17,9 @@ function M.config()
     debug = true,
     sources = {
       formatting.stylua,
-      formatting.prettier,
+      formatting.prettier.with{
+      extra_files = {'*.md'},
+      },
       formatting.black,
       formatting.clang_format.with {
         command = 'clang-format',

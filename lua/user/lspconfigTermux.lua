@@ -59,7 +59,6 @@ function M.config()
 
   local servers = {
     'pyright',
-    'marksman',
     'bashls',
   }
 

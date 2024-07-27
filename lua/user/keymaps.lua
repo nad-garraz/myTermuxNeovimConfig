@@ -63,6 +63,8 @@ vim.keymap.set('x', 'p', '[["_dP]]', { desc = 'Better Paste' , noremap = true })
 vim.keymap.set('v', '<leader>ss', '"hy:%s/<c-r>h//gc<left><left><left>', { desc = 'Substitute selected text' })
 vim.keymap.set('n', '<leader>sw', "viw\"hy:%s/<c-r>=expand('<cword>')<cr>//gc<left><left><left>", { desc = 'Substitute word under cursor text' })
 
+-- Set current buf directory to cwd
+vim.keymap.set('n', '<leader>cd',"<CMD>lua vim.fn.chdir(require 'mis_cosas.myUtils'.get_buf_dir())<CR>", {desc = "Buffer dir -> CWD"})
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 vim.keymap.set('t', '<ESC><ESC>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
