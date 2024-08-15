@@ -68,3 +68,7 @@ vim.keymap.set('n', '<leader>cd',"<CMD>lua vim.fn.chdir(require 'mis_cosas.myUti
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 vim.keymap.set('t', '<ESC><ESC>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Neogit
+vim.keymap.set('n', '<leader>ng', '<CMD>Neogit<CR>', { desc = 'Open NeoGit' })
+
