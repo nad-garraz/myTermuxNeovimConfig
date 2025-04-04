@@ -32,4 +32,4 @@ require 'mis_cosas.myUtils'
 require 'snippets.latex_snips'
 
 -- -- color
-vim.cmd.colorscheme 'matrix'
+vim.cmd.colorscheme 'retrobox'

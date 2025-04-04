@@ -42,6 +42,44 @@ ls.add_snippets(nil, {
 			)
 		),
 
+		-- matriz
+		s(
+			{
+				trig = "matriz",
+				name = "matriz",
+				desc = "\\begin{{matriz}{l}\n{ \n }",
+			},
+			fmt(
+				"\\matriz{{{iNode1}}}{{\n {iNode2} \n}}",
+				{ iNode1 = i(1, "<+align+>"), iNode2 = i(2, "<+ acá se escribe +>") }
+			)
+		),
+		-- detereminante
+		s(
+			{
+				trig = "deter",
+				name = "determinante",
+				desc = "\\begin{{deter}{l}\n{ \n }",
+			},
+			fmt(
+				"\\deter{{{iNode1}}}{{\n {iNode2} \n}}",
+				{ iNode1 = i(1, "<+align+>"), iNode2 = i(2, "<+ acá se escribe +>") }
+			)
+		),
+
+		-- cajaResultado
+		s(
+			{
+				trig = "caja",
+				name = "cajaResultado",
+				desc = "\\cajaResultado{...}",
+			},
+			fmt(
+				"\\cajaResultado{{\n {iNode1} \n}}",
+				{ iNode1 = i(1, "<+ acá se escribe +>") }
+			)
+		),
+
 		-- Fracciones
 		s(
 			{
@@ -62,7 +100,7 @@ ls.add_snippets(nil, {
 				name = "congruencia",
 				desc = "\\congruencia{a}{r}{d}",
 			},
-			fmt("\\congruencia{{{iNode1}}}{{{iNode2}}}{{{iNode3}}} {iNode4}", {
+			fmt("\\congruencia{{{iNode1}}}{{{iNode2}}}{{{iNode3}}}{iNode4}", {
 				iNode1 = i(1, "<+a+>"),
 				iNode2 = i(2, "<+r+>"),
 				iNode3 = i(3, "<+d+>"),
