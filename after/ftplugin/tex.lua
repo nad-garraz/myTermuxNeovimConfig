@@ -138,7 +138,7 @@ vim.keymap.set('i', '$$', '$$<++><ESC>"9F$i', {
 -- cpanm File::HomeDir
 
 local CONFIG_FILE = vim.fn.expand '~/.config/nvim/.latexindent.yaml'
-local LATEXINDENT_CMD = '/data/data/com.termux/files/usr/bin/texlive/latexindent'
+local LATEXINDENT_CMD = vim.fn.expand '~/.latexindent/latexindent.pl'
 
 
 local function texFormat()
@@ -158,7 +158,7 @@ local function texFormat()
   vim.cmd 'update'
 
   -- Format the file
-  local formatCommand = string.format('%s -m -l %s -w "%s"', LATEXINDENT_CMD, CONFIG_FILE, vim.fn.expand '%:p')
+  local formatCommand = string.format('perl %s -m -l %s -w "%s"', LATEXINDENT_CMD, CONFIG_FILE, vim.fn.expand '%:p')
   local output = vim.fn.system(formatCommand)
 
   if vim.v.shell_error == 2 then
