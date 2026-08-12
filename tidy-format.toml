@@ -1,0 +1,18 @@
+# --- Formato General ---
+indent: yes
+indent-spaces: 2
+wrap: 100
+markup: yes
+output-xhtml: no
+
+# --- Manejo de Elementos ---
+# Forzamos que <a> y <br> se comporten como bloques para que ocupen su propia línea
+new-blocklevel-tags: a, br
+
+# Evitamos que el contenido se colapse en una sola línea de texto
+vertical-space: yes
+break-before-br: yes
+
+# --- Limpieza ---
+tidy-mark: no
+quiet: yes
